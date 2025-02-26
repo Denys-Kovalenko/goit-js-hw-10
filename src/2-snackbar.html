@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2-snackbar</title>
+    <style>
+      * main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      label {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+        color: #2e2f42;
+        cursor: pointer;
+      }
+
+      input[type='number'] {
+        display: flex;
+        width: 100%;
+        border: 1px solid #808080;
+        border-radius: 4px;
+        width: 360px;
+        height: 40px;
+        padding-left: 16px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-top: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+
+      input[type='number']:focus {
+        border: 1px solid #4e75ff;
+        outline: none;
+      }
+
+      input[type='number']:hover {
+        border: 1px solid #000;
+      }
+
+      fieldset {
+        width: 360px;
+        height: 64px;
+        border: 1px solid #808080;
+        border-radius: 4px;
+
+        margin-bottom: 24px;
+        text-align: left;
+        box-sizing: border-box;
+      }
+
+      legend {
+        font-weight: 400;
+        font-size: 16px;
+
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+        color: #2e2f42;
+      }
+
+      input[type='radio'] {
+        margin-bottom: 15px;
+        border-radius: 14px;
+        stroke-width: 1px;
+        stroke: #757575;
+        cursor: pointer;
+        gap: 45px;
+      }
+
+      button {
+        border-radius: 8px;
+        padding: 8px 16px;
+        width: 360px;
+        height: 40px;
+
+        background: #4e75ff;
+        color: white;
+        border: none;
+
+        cursor: pointer;
+        font-size: 16px;
+        transition: background 0.3s;
+
+        font-weight: 500;
+        font-size: 16px;
+
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+        color: #fff;
+      }
+
+      button:hover {
+        background: #6c8cff;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <form class="form">
+        <label>
+          Delay (ms)
+          <input type="number" name="delay" required />
+        </label>
+
+        <fieldset>
+          <legend>State</legend>
+          <label>
+            <input type="radio" name="state" value="fulfilled" required />
+            Fulfilled
+          </label>
+          <label>
+            <input type="radio" name="state" value="rejected" required />
+            Rejected
+          </label>
+        </fieldset>
+
+        <button type="submit">Create notification</button>
+      </form>
+    </main>
+    <script type="module" src="./js/2-snackbar.js"></script>
+  </body>
+</html>
