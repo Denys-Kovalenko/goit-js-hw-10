@@ -20,7 +20,7 @@ const options = {
         message: 'Please choose a date in the future',
         messageColor: '#fff',
         position: 'topRight',
-        iconUrl: './img/Group.png',
+        iconUrl: `${import.meta.env.BASE_URL}img/Group.png`,
         color: '#ef4040',
       });
       startBtn.disabled = true;
