@@ -3,7 +3,7 @@ import 'flatpickr/dist/flatpickr.min.css';
 
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import icon from '../img/Group.png';
+
 const startBtn = document.querySelector('[data-start]');
 const dateInput = document.querySelector('#datetime-picker');
 let userSelectedDate = null;
@@ -20,7 +20,7 @@ const options = {
         message: 'Please choose a date in the future',
         messageColor: '#fff',
         position: 'topRight',
-        iconUrl: 'icon',
+        iconUrl: `${import.meta.env.BASE_URL}img/Group.png`,
         color: '#ef4040',
       });
       startBtn.disabled = true;
